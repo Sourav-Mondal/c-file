@@ -1,0 +1,26 @@
+/*For example, if the list is [-10, -10, 5, 2], we should return 500, since that's -10 * -10 * 5.*/
+#include<stdio.h>
+void main()
+{
+    int n,a[100],i,j,k,sum,temp=0;
+    printf("enter the number of array:");
+    scanf("%d",&n);
+    printf("enter the array element:");
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+   for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            for(k=j+1;k<n;k++){
+                sum=a[i]*a[j]*a[k];
+                if(sum>temp){
+                    temp=sum;
+
+                }
+            }
+        }
+    }
+    printf("%d",temp);
+
+
+}

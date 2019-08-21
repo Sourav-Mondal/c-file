@@ -1,0 +1,36 @@
+/*A number is considered perfect if its digits sum up to exactly 10.
+Given a positive integer n, return the n-th perfect number.
+For example, given 1, you should return 19. Given 2, you should return 28.*/
+#include<stdio.h>
+void main()
+{
+    int i,sum=0,n,t,rem,temp,u=1;
+    printf("enter the upto number");
+    scanf("%d",&n);
+    printf("the number term th :");
+    scanf("%d",&t);
+   
+    for(i=1;i<n;i++){
+        temp=i;
+        sum=0;
+        while(temp!=0){
+            rem=temp%10;
+            sum+=rem;
+            temp=temp/10;
+        }
+        if(sum==10){
+            if(t==u){
+            
+            printf("%d",i);
+            break;
+            }
+            else{
+                u++;
+            }
+            
+            
+        }
+        
+    }
+    
+}
